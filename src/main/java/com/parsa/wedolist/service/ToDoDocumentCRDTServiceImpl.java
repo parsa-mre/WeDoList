@@ -27,6 +27,16 @@ public class ToDoDocumentCRDTServiceImpl implements ToDoDocumentService {
     }
 
     @Override
+    public void saveAsync(ToDoDocument toDoDocument) {
+        ToDoDocument existingToDoDocument = toDoDocumentRepository.findById(toDoDocument.getId()).orElse(null);
+        if (existingToDoDocument == null) {
+            return;
+        }
+        existingToDoDocument.merge(toDoDocument);
+        toDoDocumentRepository.save(existingToDoDocument);
+    }
+
+    @Override
     public ToDoDocument getById(String documentId) {
         return toDoDocumentRepository.findById(documentId).orElse(null);
     }
