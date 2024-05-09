@@ -17,11 +17,9 @@ public class ToDoListController {
     public ToDoDocument getToDoList(@PathVariable("id") String documentId) {
         return toDoDocumentService.getById(documentId);
     }
-
-    @PostMapping("/")
-    public ToDoDocument createToDoList(@RequestBody ToDoDocument toDoDocument) {
-        return toDoDocumentService.saveOrUpdate(toDoDocument);
+    @PostMapping("")
+    public ToDoDocument createToDoList() {
+        System.out.println("Creating new to do list");
+        return toDoDocumentService.createAToDoList();
     }
-
-
 }
