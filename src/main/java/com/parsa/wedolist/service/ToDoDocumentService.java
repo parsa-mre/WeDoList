@@ -11,4 +11,5 @@ public interface ToDoDocumentService {
     void saveAsync(ToDoDocument toDoDocument);
     ToDoDocument getById(String documentId);
     void deleteById(String documentId);
+    ToDoDocument createAToDoList();
 }

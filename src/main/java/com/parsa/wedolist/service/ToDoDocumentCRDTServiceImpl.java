@@ -5,6 +5,9 @@ import com.parsa.wedolist.repository.ToDoDocumentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.UUID;
+
 @Service
 public class ToDoDocumentCRDTServiceImpl implements ToDoDocumentService {
 
@@ -44,5 +47,17 @@ public class ToDoDocumentCRDTServiceImpl implements ToDoDocumentService {
     @Override
     public void deleteById(String documentId) {
         toDoDocumentRepository.deleteById(documentId);
+    }
+
+    @Override
+    public ToDoDocument createAToDoList() {
+        String id = UUID.randomUUID().toString().substring(0, 5);
+        ToDoDocument toDoDocument = new ToDoDocument(
+            id,
+            new ArrayList<>(),
+            new ArrayList<>(),
+            new ArrayList<>()
+        );
+        return toDoDocumentRepository.save(toDoDocument);
     }
 }
