@@ -1,7 +1,12 @@
 # **WeDoList: Collaborative Todo List with Real-time Syncing**
 
 **Tech Stack:** Spring Boot | SockJS | Redis | MongoDB | ReactJS | TypeScript
+Head to the [frontend repository](https://github.com/parsa-mre/WeDoList-front).
+
 <img width="918" alt="Screenshot 2024-05-21 at 12 04 09 PM" src="https://github.com/parsa-mre/WeDoList/assets/75425384/a7b1f3a2-4324-484a-918e-704c74c07af7">
+<img width="551" alt="Screenshot 2024-05-21 at 12 23 15 PM" src="https://github.com/parsa-mre/WeDoList/assets/75425384/6467451c-0015-4dc3-a2f2-2f28b3d62ed0">
+<img width="1710" alt="Screenshot 2024-05-21 at 12 33 56 PM" src="https://github.com/parsa-mre/WeDoList/assets/75425384/d4e7109a-1199-49da-99d2-7fa02e8530b3">
+
 
 
 ## Features
